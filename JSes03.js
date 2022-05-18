@@ -1,5 +1,6 @@
 var x = 3;
 var sing;
+
 $("#btn1").click(function () {
   calcola("+");
 });
@@ -35,8 +36,9 @@ function calcola(sing) {
         var res = n1 / n2;
         break;
     }
+    localStorage.setItem($("#tb", res));
     console.log(res);
-    $("#tb").append(
+    localStorage.getItem($("#tb")).append(
       "<tr><td>" +
         x +
         "</td><td>" +
@@ -52,6 +54,7 @@ function calcola(sing) {
     console.log($("#tb"));
     x++;
     console.log("x=" + x);
+    localStorage.setItem($("#tb"));
   } else {
     alert("complete all input");
   }
