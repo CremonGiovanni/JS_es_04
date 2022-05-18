@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <title>JSES3</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1 style="color: chartreuse">JSES3</h1>
+    <h2>JQuery calculator</h2>
+    <div>
+      <table border="1" id="tb">
+        <th>ID</th>
+        <th>N1</th>
+        <th>SING</th>
+        <th>N2</th>
+        <th>RES</th>
+        <tr>
+          <td>1</td>
+          <td>4</td>
+          <td>/</td>
+          <td>2</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>7</td>
+          <td>*</td>
+          <td>3</td>
+          <td>21</td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <input type="number" id="N1" placeholder="first number" />
+      <input type="number" id="N2" placeholder="second number" />
+      <br /><br />
+      <button id="btn1">+</button>
+      <button id="btn2">-</button>
+      <button id="btn3">*</button>
+      <button id="btn4">/</button>
+    </div>
+    <script>
+        var x=3;
+      $("#btn1").click(function () {
+        var n1 = $("#N1").val();
+        var n2 = $("#N2").val();
+        console.log(n1 -(-n2));
+        $("#tb").append("<tr><td>"+x+"</td><td>"+n1+"</td><td>+</td><td>"+ n2+"</td><td>"+(n1 -(-n2))+"</td></tr>");
+        console.log($("#tb"));
+        x++;
+        console.log("x="+x);
+      });
+      $("#btn2").click(function () {
+        var n1 = $("#N1").val();
+        var n2 = $("#N2").val();
+        console.log(n1 -n2);
+        $("#tb").append("<tr><td>"+x+"</td><td>"+n1+"</td><td>-</td><td>"+ n2+"</td><td>"+(n1-n2)+"</td></tr>");
+        console.log($("#tb"));
+        x++;
+        console.log("x="+x);
+      });
+      $("#btn3").click(function () {
+        var n1 = $("#N1").val();
+        var n2 = $("#N2").val();
+        console.log(n1 *n2);
+        $("#tb").append("<tr><td>"+x+"</td><td>"+n1+"</td><td>*</td><td>"+ n2+"</td><td>"+(n1*n2)+"</td></tr>");
+        console.log($("#tb"));
+        x++;
+        console.log("x="+x);
+      });
+      $("#btn4").click(function () {
+        var n1 = $("#N1").val();
+        var n2 = $("#N2").val();
+        console.log(n1 /n2);
+        console.log($("#tb"));
+        $("#tb").append("<tr><td>"+x+"</td><td>"+n1+"</td><td>/</td><td>"+ n2+"</td><td>"+(n1/n2)+"</td></tr>");
+        x++;
+        console.log("x="+x);
+      });
+    </script>
+  </body>
+</html>
